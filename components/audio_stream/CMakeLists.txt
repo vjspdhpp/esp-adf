@@ -6,7 +6,8 @@ set(COMPONENT_SRCS "fatfs_stream.c"
                     "tone_stream.c"
                     "tcp_client_stream.c"
                     "embed_flash_stream.c"
-                    "pwm_stream.c")
+                    "pwm_stream.c"
+                    "i2s_stream_idf5.c")
 set(COMPONENT_ADD_INCLUDEDIRS "include")
 
 set(COMPONENT_PRIV_INCLUDEDIRS "lib/hls/include" "lib/gzip/include")
