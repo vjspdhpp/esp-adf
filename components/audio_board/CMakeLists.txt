@@ -143,4 +143,24 @@ set(COMPONENT_SRCS
 )
 endif()
 
+if (CONFIG_ESP32_S3_CARDPUTER)
+message(STATUS "Current board name is " CONFIG_ESP32_S3_CARDPUTER)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./m5stack_cardputer)
+set(COMPONENT_SRCS
+./m5stack_cardputer/board.c
+./m5stack_cardputer/board_pins_config.c
+)
+endif()
+
+if (CONFIG_ESP32_C3_MTNT_EVT)
+message(STATUS "Current board name is " CONFIG_ESP32_C3_MTNT_EVT)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./esp32_c3_mtnt_evt)
+set(COMPONENT_SRCS
+./esp32_c3_mtnt_evt/board.c
+./esp32_c3_mtnt_evt/board_pins_config.c
+./esp32_c3_mtnt_evt/C3_lyra_sys_pattern.c
+)
+endif()
+
+
 register_component()

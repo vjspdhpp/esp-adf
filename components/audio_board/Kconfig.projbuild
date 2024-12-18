@@ -2,7 +2,7 @@ menu "Audio HAL"
 
 choice AUDIO_BOARD
     prompt "Audio board"
-    default ESP_LYRAT_V4_3_BOARD
+    default CONFIG_ESP32_S3_CARDPUTER
     help
         Select an audio board to use with the ESP-ADF
 config AUDIO_BOARD_CUSTOM
@@ -37,7 +37,10 @@ config ESP32_C6_DEVKIT_BOARD
     bool "ESP32-C6-DEVKIT"
 config ESP32_P4_FUNCTION_EV_BOARD
     bool "ESP32-P4-FUNCTION-EV-BOARD"
-
+config ESP32_S3_CARDPUTER
+    bool "ESP32-S3-CARDPUTER"
+config ESP32_C3_MTNT_EVT
+    bool "ESP32-C3-MTNT-EVT"
 endchoice
 
 choice ESP32_KORVO_DU1906_DAC

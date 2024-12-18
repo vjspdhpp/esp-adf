@@ -51,3 +51,13 @@ ifdef CONFIG_ESP32_C3_LYRA_V2_BOARD
 COMPONENT_ADD_INCLUDEDIRS += ./esp32_c3_lyra
 COMPONENT_SRCDIRS += ./esp32_c3_lyra
 endif
+
+ifdef CONFIG_ESP32_S3_CARDPUTER
+COMPONENT_ADD_INCLUDEDIRS += ./m5stack_cardputer
+COMPONENT_SRCDIRS += ./m5stack_cardputer
+endif
+
+ifdef CONFIG_ESP32_C3_MTNT_EVT
+COMPONENT_ADD_INCLUDEDIRS += ./esp32_c3_mtnt_evt
+COMPONENT_SRCDIRS += ./esp32_c3_mtnt_evt
+endif
