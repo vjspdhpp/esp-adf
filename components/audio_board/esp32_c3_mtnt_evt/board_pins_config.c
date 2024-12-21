@@ -51,9 +51,9 @@ esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 {
     AUDIO_NULL_CHECK(TAG, i2s_config, return ESP_FAIL);
 
-    i2s_config->bck_io_num = -1;
-    i2s_config->ws_io_num = -1;
-    i2s_config->data_out_num = PDM_TX_GPIO;
+    i2s_config->bck_io_num = 5;
+    i2s_config->ws_io_num = 6;
+    i2s_config->data_out_num = 7;
     i2s_config->data_in_num = -1;
 
     return ESP_OK;
