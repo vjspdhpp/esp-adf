@@ -30,7 +30,7 @@
 #include "audio_mem.h"
 #include "soc/soc_caps.h"
 
-static const char *TAG = "ESP32_S3_BOX";
+static const char *TAG = "M5STACK_CARDPUTER";
 
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 {
@@ -51,15 +51,15 @@ esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 {
     AUDIO_NULL_CHECK(TAG, i2s_config, return ESP_FAIL);
     if (port == 0) {
-        i2s_config->bck_io_num = GPIO_NUM_17;
-        i2s_config->ws_io_num = GPIO_NUM_47;
-        i2s_config->data_out_num = GPIO_NUM_15;
-        i2s_config->data_in_num = GPIO_NUM_16;
-        i2s_config->mck_io_num = GPIO_NUM_2;
+        i2s_config->bck_io_num = GPIO_NUM_41;
+        i2s_config->ws_io_num = GPIO_NUM_43;
+        i2s_config->data_out_num = GPIO_NUM_42;
+        i2s_config->data_in_num = -1;
+        i2s_config->mck_io_num = -1;
     } else if (port == 1) {
-        i2s_config->bck_io_num = -1;
-        i2s_config->ws_io_num = -1;
-        i2s_config->data_out_num = -1;
+        i2s_config->bck_io_num = GPIO_NUM_41;
+        i2s_config->ws_io_num = GPIO_NUM_43;
+        i2s_config->data_out_num = GPIO_NUM_42;
         i2s_config->data_in_num = -1;
         i2s_config->mck_io_num = -1;
     } else {
@@ -67,6 +67,7 @@ esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
         ESP_LOGE(TAG, "i2s port %d is not supported", port);
         return ESP_FAIL;
     }
+    ESP_LOGE(TAG, "get_i2s_pins port=%d, bck_io_num=%d, ws_io_num=%d, data_out_num=%d, data_in_num=%d, mck_io_num=%d", port, i2s_config->bck_io_num, i2s_config->ws_io_num, i2s_config->data_out_num, i2s_config->data_in_num, i2s_config->mck_io_num);
 
     return ESP_OK;
 }

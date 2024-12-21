@@ -28,7 +28,7 @@
 /**
  * @brief LCD SCREEN Function Definition
  */
-#define FUNC_LCD_SCREEN_EN          (1)
+#define FUNC_LCD_SCREEN_EN          (0)
 #define LCD_CTRL_GPIO               GPIO_NUM_45
 #define LCD_RST_GPIO                GPIO_NUM_48
 #define LCD_DC_GPIO                 GPIO_NUM_4
@@ -49,7 +49,7 @@
  * @brief SDCARD Function Definition
  *        PMOD2 for one line sdcard
  */
-#define FUNC_SDCARD_EN             (1)
+#define FUNC_SDCARD_EN             (0)
 #define SDCARD_OPEN_FILE_NUM_MAX    5
 #define SDCARD_INTR_GPIO            -1
 #define SDCARD_PWR_CTRL             -1
@@ -70,7 +70,7 @@
 /**
  * @brief LCD TOUCH PANEL Function Definition
  */
-#define FUNC_LCD_TOUCH_EN          (1)
+#define FUNC_LCD_TOUCH_EN          (0)
 #define TOUCH_PANEL_SWAP_XY        (0)
 #define TOUCH_PANEL_INVERSE_X      (1)
 #define TOUCH_PANEL_INVERSE_Y      (0)
@@ -78,7 +78,7 @@
 /**
  * @brief  Audio Codec Chip Function Definition
  */
-#define FUNC_AUDIO_CODEC_EN       (1)
+#define FUNC_AUDIO_CODEC_EN       (0)
 #define CODEC_ADC_I2S_PORT        ((i2s_port_t)0)
 #define CODEC_ADC_BITS_PER_SAMPLE ((i2s_data_bit_width_t)32)  /* 32bit */
 #define CODEC_ADC_SAMPLE_RATE     (48000)
