@@ -30,7 +30,7 @@
 #include "audio_mem.h"
 #include "soc/soc_caps.h"
 
-static const char *TAG = "ESP32_C3_Lyra";
+static const char *TAG = "ESP32_C3_MTNT";
 
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 {
@@ -53,7 +53,7 @@ esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 
     i2s_config->bck_io_num = 5;
     i2s_config->ws_io_num = 6;
-    i2s_config->data_out_num = 7;
+    i2s_config->data_out_num = 4;
     i2s_config->data_in_num = -1;
 
     return ESP_OK;
